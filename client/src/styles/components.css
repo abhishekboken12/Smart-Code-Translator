@@ -1,0 +1,209 @@
+/* ==========================================================================
+   Global / App Shell — CodeTranslator
+   Shares the same design tokens as login.css (evergreen accent) so the
+   dark app shell and the light login card read as one product.
+   ========================================================================== */
+
+:root {
+  --paper: #f7f7f5;
+  --surface: #ffffff;
+  --ink: #1b1f23;
+  --muted: #6b7280;
+  --accent: #3a5a40;
+  --accent-hover: #2f4a35;
+  --accent-soft: #e7eee7;
+  --border: #e2e2de;
+  --error: #c0392b;
+  --radius: 10px;
+  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto,
+    Helvetica, Arial, sans-serif;
+  --font-mono: "SFMono-Regular", ui-monospace, "JetBrains Mono", "Fira Code",
+    Menlo, Consolas, monospace;
+
+  /* Dark-shell counterparts of the tokens above */
+  --shell-bg: #12160f;
+  --shell-bg-soft: #171c14;
+  --shell-surface: #1c2118;
+  --shell-border: #2a3324;
+  --shell-ink: #f3f4f1;
+  --shell-muted: #9ba69a;
+  --shell-accent: #7fbf8c;
+  --shell-accent-hover: #6bab78;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: var(--font);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* --------------------------------- Shell --------------------------------- */
+
+.app-shell {
+  min-height: 100vh;
+  width: 100%;
+  background: var(--shell-bg);
+  background-image: radial-gradient(
+    circle at 85% 0%,
+    rgba(127, 191, 140, 0.08),
+    transparent 50%
+  );
+  color: var(--shell-ink);
+  font-family: var(--font);
+  display: flex;
+  flex-direction: column;
+}
+
+.app-shell h1 {
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  margin: 0 0 12px;
+  font-family: var(--font-mono);
+}
+
+.app-shell p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--shell-muted);
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.app-shell a {
+  color: var(--shell-accent);
+  text-decoration: none;
+}
+
+.app-shell a:hover {
+  color: var(--shell-accent-hover);
+  text-decoration: underline;
+}
+
+/* ------------------------------ Buttons ---------------------------------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 42px;
+  padding: 0 20px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  font-family: var(--font);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease,
+    transform 0.05s ease;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn-primary {
+  background: var(--shell-accent);
+  color: #0c1009;
+}
+
+.btn-primary:hover {
+  background: var(--shell-accent-hover);
+}
+
+.btn-outline {
+  background: transparent;
+  border-color: var(--shell-border);
+  color: var(--shell-ink);
+}
+
+.btn-outline:hover {
+  border-color: var(--shell-accent);
+  color: var(--shell-accent);
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--shell-accent);
+  outline-offset: 2px;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* --------------------------- Protected-route loading ---------------------- */
+/* Shown by ProtectedRoute.jsx while the auth check is in flight. Safe to
+   remove this block if ProtectedRoute doesn't render a loading state. */
+
+.route-loading {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  background: var(--shell-bg);
+  color: var(--shell-muted);
+  font-family: var(--font);
+}
+
+.route-loading-spinner {
+  width: 28px;
+  height: 28px;
+  border: 3px solid var(--shell-border);
+  border-top-color: var(--shell-accent);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .route-loading-spinner {
+    animation: none;
+  }
+}
+
+.route-loading-text {
+  font-size: 14px;
+}
+
+/* --------------------------------- Layout --------------------------------- */
+
+.app-shell-centered {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+}
+
+/* ------------------------------- Responsive -------------------------------- */
+
+@media (max-width: 480px) {
+  .app-shell h1 {
+    font-size: 26px;
+  }
+
+  .app-shell p {
+    font-size: 15px;
+  }
+}

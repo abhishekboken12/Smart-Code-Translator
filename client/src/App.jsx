@@ -1,7 +1,11 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 import LoginPage from "./pages/LoginPage.jsx";
+import HomePage from "./pages/HomePage.jsx";
+import HistoryPage from "./pages/HistoryPage.jsx";
 import ProtectedRoute from "./components/ProtectedRoute.jsx";
+// import Navbar from "./components/Navbar.jsx";
 import "./styles/components.css";
+
 
 function App() {
   return (
@@ -12,16 +16,17 @@ function App() {
           path="/"
           element={
             <ProtectedRoute>
-              <div
-                style={{
-                  color: "#fff",
-                  textAlign: "center",
-                  marginTop: "4rem",
-                }}
-              >
-                <h1>Welcome to CodeTranslator!</h1>
-                <p>The code editor and AI features are coming in Part 2.</p>
-              </div>
+              <Navbar />
+              <HomePage />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/history"
+          element={
+            <ProtectedRoute>
+              
+              <HistoryPage />
             </ProtectedRoute>
           }
         />
@@ -32,3 +37,6 @@ function App() {
 }
 
 export default App;
+
+
+{/* <Navbar /> */}

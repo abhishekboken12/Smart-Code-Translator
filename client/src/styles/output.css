@@ -1,0 +1,40 @@
+/* ----------------------------- Language select ----------------------------- */
+
+.lang-select {
+  appearance: none;
+  -webkit-appearance: none;
+  height: 32px;
+  padding: 0 32px 0 12px;
+  border-radius: 8px;
+  border: 1px solid var(--shell-border);
+  background-color: var(--shell-surface);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6' fill='none'%3E%3Cpath d='M1 1L5 5L9 1' stroke='%239ba69a' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  color: var(--shell-ink);
+  font-family: var(--font);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.lang-select option {
+  background: var(--shell-surface);
+  color: var(--shell-ink);
+}
+
+.lang-select:hover:not(:disabled) {
+  border-color: var(--shell-accent);
+}
+
+.lang-select:focus-visible {
+  outline: 2px solid var(--shell-accent);
+  outline-offset: 2px;
+  border-color: var(--shell-accent);
+}
+
+.lang-select:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

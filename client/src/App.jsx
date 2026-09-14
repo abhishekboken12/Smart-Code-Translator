@@ -3,7 +3,7 @@ import LoginPage from "./pages/LoginPage.jsx";
 import HomePage from "./pages/HomePage.jsx";
 import HistoryPage from "./pages/HistoryPage.jsx";
 import ProtectedRoute from "./components/ProtectedRoute.jsx";
-// import Navbar from "./components/Navbar.jsx";
+import Navbar from "./components/Navbar.jsx";
 import "./styles/components.css";
 
 
@@ -25,7 +25,7 @@ function App() {
           path="/history"
           element={
             <ProtectedRoute>
-              
+              <Navbar />
               <HistoryPage />
             </ProtectedRoute>
           }
@@ -35,8 +35,5 @@ function App() {
     </div>
   );
 }
-
 export default App;
 
-
-{/* <Navbar /> */}

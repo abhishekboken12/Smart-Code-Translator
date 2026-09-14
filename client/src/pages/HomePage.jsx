@@ -180,3 +180,5 @@ return (
 );
 
 }
+
+export default HomePage

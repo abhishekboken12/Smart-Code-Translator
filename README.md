@@ -99,6 +99,72 @@ git clone git@github.com:abhishekboken12/Smart-Code-Translator.git
 cd smart-code-translator
 ```
 
+### 2. Install frontend dependencies
+
+```bash
+cd client
+npm install
+```
+
+### 3. Install backend dependencies
+
+```bash
+cd server
+npm install
+```
+
+### 🔐 Environment Variables
+
+Create a .env file inside the server folder:
+
+```bash
+PORT=5000
+CLIENT_URL=http://localhost:5173
+
+MONGODB_URI=your_mongodb_connection_string
+
+JWT_SECRET=your_super_secret_jwt_key
+JWT_EXPIRES_IN=7d
+
+GOOGLE_CLIENT_ID=your_google_client_id
+
+GEMINI_API_KEY=your_gemini_api_key
+```
+
+### Frontend Environment Variables
+
+Create a .env file inside the client folder:
+
+```bash
+VITE_GOOGLE_CLIENT_ID=your_google_client_id
+```
+
+### ▶️ Run the Application
+
+Start the backend
+
+```bash
+cd server
+npm run dev
+```
+
+Backend will run on:
+```bash
+http://localhost:5000
+```
+
+Start the frontend
+
+Open another terminal:
+```bash
+cd client
+npm run dev
+```
+
+Frontend will run on:
+```bash
+http://localhost:5173
+```
 
 
 

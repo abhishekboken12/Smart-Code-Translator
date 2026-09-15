@@ -196,7 +196,24 @@ http://localhost:5173
 | `DELETE` | `/api/history/:id` | Delete one history record |
 | `DELETE` | `/api/history/clear` | Delete all history |
 
+## 🔒 Authorization
 
+### Protected routes require a JWT token in the request header:
+```http
+Authorization: Bearer YOUR_JWT_TOKEN
+```
+
+### Example Using Axios
+```JavaScript
+const response = await axios.get(
+  "http://localhost:5000/api/history",
+  {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  }
+);
+```
 
 
 

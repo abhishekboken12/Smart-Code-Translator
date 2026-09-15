@@ -215,6 +215,65 @@ const response = await axios.get(
 );
 ```
 
+## 🔄 Application Flow
+
+```
+React Frontend
+      │
+      ▼
+Express API
+      │
+      ▼
+JWT Authentication Middleware
+      │
+      ▼
+Controller
+      │
+      ▼
+Service Layer
+      │
+      ▼
+Google Gemini AI
+      │
+      ▼
+MongoDB History Storage
+```
+
+## 🤖 AI Operations
+
+The application uses Google Gemini AI to perform the following operations.
+
+### Code Translation
+
+Converts code from one programming language to another.
+
+### Complexity Analysis
+
+Provides:
+
+- Time complexity
+- Space complexity
+- Explanation of complexity
+- Potential performance issues
+
+### Code Optimization
+
+Suggests:
+
+- Better algorithms
+- Improved readability
+- Reduced time complexity
+- Reduced space complexity
+- Cleaner code structure
+
+### Code Explanation
+
+Explains code in a beginner-friendly way, including:
+
+- Purpose of the code
+- Step-by-step execution
+- Important functions
+- Variables and logic
 
 
 

@@ -54,7 +54,7 @@ An AI-powered full-stack application that translates, analyzes, optimizes, and e
 ```text
 smart-code-translator/
 │
-├── client/
+|--- client/
 │   ├── public/
 │   ├── src/
 │   │   ├── components/
@@ -79,3 +79,21 @@ smart-code-translator/
 │
 ├── .gitignore
 └── README.md
+```
+## Prerequisites
+
+Make sure you have installed:
+- Node.js v20.20.2
+- npm 11.12.1
+- MongoDB or MongoDB Atlas
+- Git
+- Google Gemini API key 
+- Google OAuth Client ID
+
+## 🔧 Installation
+
+# 1. Clone the repository
+
+
+
+

@@ -95,7 +95,7 @@ Make sure you have installed:
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/smart-code-translator.git
+git clone git@github.com:abhishekboken12/Smart-Code-Translator.git
 cd smart-code-translator
 ```
 

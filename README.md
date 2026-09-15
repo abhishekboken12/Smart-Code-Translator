@@ -166,6 +166,37 @@ Frontend will run on:
 http://localhost:5173
 ```
 
+## 🔗 API Endpoints
+
+### Authentication
+
+| Method | Endpoint | Description |
+|---|---|---|
+| `POST` | `/api/auth/register` | Register a new user |
+| `POST` | `/api/auth/login` | Login with email and password |
+| `POST` | `/api/auth/google` | Login using Google |
+| `GET` | `/api/auth/me` | Get current user |
+| `POST` | `/api/auth/logout` | Logout user |
+
+### Code Operations
+
+| Method | Endpoint | Description |
+|---|---|---|
+| `POST` | `/api/code/translate` | Translate code |
+| `POST` | `/api/code/analyze` | Analyze code complexity |
+| `POST` | `/api/code/optimize` | Optimize code |
+| `POST` | `/api/code/explain` | Explain code |
+
+### History
+
+| Method | Endpoint | Description |
+|---|---|---|
+| `GET` | `/api/history` | Get user history |
+| `GET` | `/api/history/:id` | Get one history record |
+| `DELETE` | `/api/history/:id` | Delete one history record |
+| `DELETE` | `/api/history/clear` | Delete all history |
+
+
 
 
 
